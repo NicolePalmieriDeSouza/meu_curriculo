@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Currículo - Estudante de Tecnologia</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, sans-serif;
+        }
+
+        body {
+            background: #f2f4f8;
+            color: #333;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            background: #fff;
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        /* BOTÃO PDF */
+        .acoes {
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .btn-pdf {
+            background: #1f3c88;
+            color: #fff;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            transition: 0.3s;
+        }
+
+        .btn-pdf:hover {
+            background: #162e66;
+        }
+
+        header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+            color: #1f3c88;
+        }
+
+        header h2 {
+            font-size: 1.1rem;
+            font-weight: 400;
+            color: #555;
+            margin-top: 5px;
+        }
+
+        .contato {
+            text-align: right;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .contato p {
+            margin-bottom: 4px;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        section h3 {
+            color: #1f3c88;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+            border-left: 4px solid #1f3c88;
+            padding-left: 10px;
+        }
+
+        .texto {
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .lista {
+            list-style: none;
+            margin-top: 10px;
+        }
+
+        .lista li {
+            margin-bottom: 8px;
+            padding-left: 15px;
+            position: relative;
+        }
+
+        .lista li::before {
+            content: "•";
+            color: #1f3c88;
+            position: absolute;
+            left: 0;
+        }
+
+        .habilidades {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 10px;
+            margin-top: 10px;
+        }
+
+        .habilidade {
+            background: #eef2ff;
+            padding: 8px 12px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 0.85rem;
+        }
+
+        footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #777;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .contato {
+                text-align: left;
+                margin-top: 15px;
+            }
+
+            .acoes {
+                text-align: left;
+            }
+        }
+
+        /* ====== ESTILO PARA PDF / IMPRESSÃO ====== */
+        @media print {
+            body {
+                background: #fff;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+                border-radius: 0;
+                padding: 0;
+            }
+
+            .acoes {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="acoes">
+        <button class="btn-pdf" onclick="baixarPDF()">📄 Baixar em PDF</button>
+    </div>
+
+    <header>
+        <div>
+            <h1>Nicole Palmieri de Souza</h1>
+            <h2>Estudante do Ensino Médio | Tecnologia | 17 Anos</h2>
+        </div>
+
+        <div class="contato">
+            <p>📍 São José - SC</p>
+            <p>📧 nicolepalmieridesouza1@gmail.com</p>
+            <p>📞 (48) 98859-7389</p>
+            <p>🔗 linkedin.com/in/nicole-palmieri-de-souza</p>
+        </div>
+    </header>
+
+    <section>
+        <h3>Objetivo</h3>
+        <p class="texto">
+            Estudante do ensino médio com formação técnica em andamento na área de tecnologia,
+            em busca da primeira oportunidade profissional como jovem aprendiz, estágio ou meu primeiro emprego,
+            para aplicar conhecimentos, aprender na prática, adquirir experiência no ambiente corporativo e
+            desenvolver habilidades profissionais para contribuir com responsabilidade, organização e 
+            dedicação para o crescimento da empresa.
+        </p>
+    </section>
+
+    <section>
+        <h3>Formação Acadêmica</h3>
+        <ul class="lista">
+            <li><strong>Ensino Médio</strong> – 3º Ano - Em andamento</li>
+            <li><strong>SENAI</strong> – Curso de Tecnologia - Informática p/ Internet (em andamento)</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Cursos Complementares</h3>
+        <ul class="lista">
+            <li>Curso de Inglês – Adult-Hyper / Conversação</li>
+            <li>Lógica de Programação</li>
+            <li>Trilha Futuro Dev - Floripa+Tec</li>
+        </ul>
+    </section>
+
+    <section>
+        <h3>Habilidades</h3>
+        <div class="habilidades">
+            <div class="habilidade">HTML</div>
+            <div class="habilidade">CSS</div>
+            <div class="habilidade">JavaScript</div>
+            <div class="habilidade">Pacote Office</div>
+            <div class="habilidade">Comunicação/Organização</div>
+            
+        </div>
+    </section>
+
+    <section>
+        <h3>Informações Adicionais</h3>
+	<ul class="lista">
+            <li>Facilidade com tecnologia</li>
+            <li>Interesse em aprendizado contínuo</li>
+            <li>Facilidade de adaptação a novos ambientes</li>
+	    <li>Responsabilidade e disponibilidade para novos desafios</li>
+        </ul>
+    </section>
+
+    <footer>
+        Currículo desenvolvido em HTML, CSS e JavaScript
+    </footer>
+
+</div>
+
+<script>
+    function baixarPDF() {
+        window.print();
+    }
+</script>
+
+</body>
+</html>
